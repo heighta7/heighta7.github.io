@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A7</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="widget-holder" class="dark level2">
+            <div id="main-widget" class="widget row gone">
+                <button class="add-person icon-and-text">
+                    <span class="iconify" data-icon="uil:plus"></span>
+                    <p>Add person</p>
+                </button>
+                <div class="flex-grow"></div>
+                <button class="heels-toggle subtle icon-and-text">
+                    <span class="toggle-on iconify" data-icon="uil:check-square"></span>
+                    <span class="toggle-off iconify" data-icon="uil:square"></span>
+                    <p>Heels</p>
+                </button>
+                <button class="reset icon-button">
+                    <span class="iconify" data-icon="uil:redo"></span>
+                </button>
+            </div>
+            <div id="person-widget" class="widget gone">
+                <div class="details">
+                    <h1 class="height"></h1>
+                    <div class="factoid-column">
+                        <div class="height-heels factoid">
+                            <span class="iconify" data-icon="icon-park-outline:high-heeled-shoes"></span>
+                            <p></p>
+                        </div>
+                        <div class="weight factoid">
+                            <span class="iconify" data-icon="uil:weight"></span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="edit-height icon-and-text">
+                        <span class="iconify" data-icon="uil:arrows-v"></span>
+                        <p>Edit height</p>
+                    </button>
+                    <div class="flex-grow"></div>
+                    <button class="graphic icon-button">
+                        <span class="iconify" data-icon="uil:user"></span>
+                    </button>
+                    <button class="heels subtle icon-and-text">
+                        <span class="iconify" data-icon="icon-park-outline:high-heeled-shoes"></span>
+                        <p></p>
+                    </button>
+                    <button class="more icon-button">
+                        <span class="iconify" data-icon="uil:ellipsis-h"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="person-menu-widget" class="widget gone">
+                <div class="title row">
+                    <button class="close icon-button">
+                        <span class="iconify" data-icon="uil:times"></span>
+                    </button>
+                    <h1>More options</h1>
+                </div>
+                <div class="grid">
+                    <button class="details icon-and-text">
+                        <span class="iconify" data-icon="uil:list-ul"></span>
+                        <p>Details</p>
+                    </button>
+                    <button class="compare icon-and-text">
+                        <span class="iconify" data-icon="uil:vertical-align-bottom"></span>
+                        <p>Compare</p>
+                    </button>
+                    <button class="edit-weight icon-and-text">
+                        <span class="iconify" data-icon="uil:weight"></span>
+                        <p>Edit weight</p>
+                    </button>
+                    <button class="delete icon-and-text">
+                        <span class="iconify" data-icon="uil:trash-alt"></span>
+                        <p>Delete</p>
+                    </button>
+                </div>
+            </div>
+            <div id="edit-height-widget" class="widget gone">
+                <div class="editor">
+                    <div class="height-feet picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="height-inches picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="height-inch-tenths picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                </div>
+                <div class="details factoid-row">
+                    <div class="height-metric factoid">
+                        <span class="iconify" data-icon="uil:arrows-v"></span>
+                        <p></p>
+                    </div>
+                    <div class="weight factoid">
+                        <span class="iconify" data-icon="uil:weight"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="averages icon-and-text">
+                        <span class="iconify" data-icon="uil:dna"></span>
+                        <p>Use averages</p>
+                    </button>
+                    <div class="flex-grow"></div>
+                    <button class="close icon-and-text">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p>Done</p>
+                    </button>
+                </div>
+            </div>
+            <div id="edit-heels-widget" class="widget gone">
+                <div class="editor-fixed editor">
+                    <div class="fixed-inches picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="fixed-inch-tenths picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                </div>
+                <div class="editor-percent editor">
+                    <div class="percent-units picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="percent-tenths picker">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                </div>
+                <div class="details factoid-row">
+                    <div class="height-heels factoid">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p></p>
+                    </div>
+                    <div class="height-no-heels factoid">
+                        <span class="iconify" data-icon="uil:times"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="buttons row">
+                    <button class="heels-toggle icon-and-text">
+                        <span class="toggle-on iconify" data-icon="uil:check-square"></span>
+                        <span class="toggle-off iconify" data-icon="uil:square"></span>
+                        <p>Enabled</p>
+                    </button>
+                    <button class="percent-toggle icon-and-text">
+                        <span class="toggle-on iconify" data-icon="uil:check-square"></span>
+                        <span class="toggle-off iconify" data-icon="uil:square"></span>
+                        <p>Dynamic</p>
+                    </button>
+                    <div class="flex-grow"></div>
+                    <button class="close icon-and-text">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p>Done</p>
+                    </button>
+                </div>
+            </div>
+            <div id="edit-graphic-widget" class="widget gone">
+                <div class="options row">
+
+                </div>
+                <div class="row">
+                    <div class="flex-grow"></div>
+                    <button class="close icon-and-text">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p>Done</p>
+                    </button>
+                </div>
+            </div>
+            <div id="edit-weight-widget" class="widget gone">
+                <div class="editor">
+                    <div class="weight-tens picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="weight-units picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <h1>kg at</h1>
+                    <div class="height-feet picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="height-inches picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                </div>
+                <div class="details factoid-column">
+                    <div class="formula-in factoid">
+                        <span class="iconify" data-icon="uil:calculator"></span>
+                        <p></p>
+                    </div>
+                    <div class="formula-out factoid">
+                        <span class="iconify" data-icon="uil:corner-down-right"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="averages icon-and-text">
+                        <span class="iconify" data-icon="uil:dna"></span>
+                        <p>Use averages</p>
+                    </button>
+                    <div class="flex-grow"></div>
+                    <button class="close icon-and-text">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p>Done</p>
+                    </button>
+                </div>
+            </div>
+            <div id="details-widget" class="widget gone">
+                <div class="title row">
+                    <h1>Details</h1>
+                    <div class="flex-grow"></div>
+                    <button class="close icon-button">
+                        <span class="iconify" data-icon="uil:times"></span>
+                    </button>
+                </div>
+                <div class="factoid-column">
+                    <div class="percentile-men factoid">
+                        <span class="iconify" data-icon="ic:round-male"></span>
+                        <p></p>
+                    </div>
+                    <div class="percentile-women factoid">
+                        <span class="iconify" data-icon="ic:round-female"></span>
+                        <p></p>
+                    </div>
+                    <div class="percentile-total factoid">
+                        <span class="iconify" data-icon="uil:user"></span>
+                        <p></p>
+                    </div>
+                    <div class="percentile-men-heels factoid">
+                        <span class="iconify" data-icon="ic:round-male"></span>
+                        <p></p>
+                    </div>
+                    <div class="percentile-women-heels factoid">
+                        <span class="iconify" data-icon="ic:round-female"></span>
+                        <p></p>
+                    </div>
+                    <div class="percentile-total-heels factoid">
+                        <span class="iconify" data-icon="uil:user"></span>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="js/lib/jquery-3.6.0.min.js"></script>
+        <script src="js/lib/js.cookie.min.js"></script>
+        <script src="js/lib/fontfaceobserver.js"></script>
+        <script src="js/lib/pixi.js"></script>
+        <script src="js/lib/viewport.min.js"></script>
+        <script src="js/lib/norm.js"></script>
+
+        <script src="js/graphics.js"></script>
+        <script src="js/people.js"></script>
+        <script src="js/viewport.js"></script>
+        <script src="js/viewport-events.js"></script>
+        <script src="js/sprites.js"></script>
+        <script src="js/persistance.js"></script>
+        
+        <script src="js/data/person.js"></script>
+        <script src="js/data/height.js"></script>
+        <script src="js/data/weight.js"></script>
+        <script src="js/data/averages.js"></script>
+        
+        <script src="js/widget/widget.js"></script>
+        <script src="js/widget/main.js"></script>
+        <script src="js/widget/person.js"></script>
+        <script src="js/widget/person-menu.js"></script>
+        <script src="js/widget/edit-height.js"></script>
+        <script src="js/widget/edit-heels.js"></script>
+        <script src="js/widget/edit-graphic.js"></script>
+        <script src="js/widget/edit-weight.js"></script>
+        <script src="js/widget/details.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    </body>
+</html>

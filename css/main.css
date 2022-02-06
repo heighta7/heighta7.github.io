@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+button .iconify {
+  font-size: 1.5rem;
+}
+
+button.subtle.gone {
+  display: none;
+}
+
+button.icon-button {
+  border-radius: 4px;
+}
+
+button.icon-and-text {
+  flex-direction: row;
+}
+button.icon-and-text p {
+  font-weight: bold;
+  margin-left: 8px;
+  margin-right: 6px;
+}
+
+.factoid {
+  flex-direction: row;
+  align-items: center;
+}
+.factoid p {
+  margin-left: 8px;
+}
+
+.factoid-row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.factoid-column {
+  margin-bottom: -12px;
+}
+.factoid-column .factoid {
+  margin-bottom: 12px;
+}
+
+.picker {
+  width: 80px;
+  height: 160px;
+}
+.picker button {
+  margin-right: 8px;
+}
+.picker p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.picker-thin {
+  width: 60px;
+}
+
+#widget-holder {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 0px 0px 8px #00000060;
+}
+
+.widget {
+  padding: 12px;
+}
+
+#person-widget .details {
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#person-widget .details .height {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+#person-menu-widget .title {
+  margin-bottom: 8px;
+}
+#person-menu-widget .title h1 {
+  margin-left: 4px;
+}
+#person-menu-widget .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+#edit-height-widget .editor {
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-right: -8px;
+}
+#edit-height-widget .details {
+  margin-bottom: 16px;
+}
+
+#edit-heels-widget .editor {
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-right: -8px;
+}
+#edit-heels-widget .details {
+  margin-bottom: 16px;
+}
+#edit-heels-widget .buttons {
+  margin-right: -8px;
+}
+#edit-heels-widget .buttons button {
+  margin-right: 8px;
+}
+
+#edit-graphic-widget .options {
+  margin-right: -8px;
+  margin-bottom: 12px;
+  overflow-x: scroll;
+}
+#edit-graphic-widget .options .option {
+  flex-shrink: 0;
+  height: 100px;
+  width: 60px;
+  margin-right: 8px;
+}
+#edit-graphic-widget .options .option img {
+  height: 76px;
+}
+
+#edit-weight-widget .editor {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-right: -8px;
+}
+#edit-weight-widget .editor h1 {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+#edit-weight-widget .details {
+  margin-bottom: 4px;
+}
+
+#details-widget .title {
+  margin-bottom: 8px;
+}
+#details-widget .title h1 {
+  margin-left: 4px;
+}
+#details-widget .factoid-column {
+  margin-bottom: -4px;
+}
+
+/*# sourceMappingURL=main.css.map */
