@@ -18,9 +18,8 @@ function init() {
     window.onresize = () => { pixi.resize(); Viewport.resize(); };
 
     Persistance.load(() => People.reset());
+    if (Widget.current == null) { Widget.changeWidget(MainWidget); }
     
-    Widget.changeWidget(MainWidget);
-
     pixi.ticker.add(() => {
         let wasDirty = Sprites.update();
         if (wasDirty) { 

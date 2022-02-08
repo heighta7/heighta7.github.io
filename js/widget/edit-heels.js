@@ -60,8 +60,8 @@ EditHeelsWidget.updateData = () => {
     }
     
     let heightPlusHeels = person.height + person.calculateHeelsCm(); 
-    $('#edit-heels-widget .height-no-heels p').text(Height.displayString(person.height));
-    $('#edit-heels-widget .height-heels p').text(Height.displayString(heightPlusHeels));
+    $('#edit-heels-widget .height-no-heels').text(Height.displayString(person.height));
+    $('#edit-heels-widget .height-heels').text(Height.displayString(heightPlusHeels));
 };
 EditHeelsWidget.toggleHeels = () => {
     People.getSelected().heelsEnabled = !People.getSelected().heelsEnabled;

@@ -101,7 +101,7 @@ button.icon-and-text {
     .editor {
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         margin-right: -8px;
     }
     .details {
@@ -112,11 +112,16 @@ button.icon-and-text {
     .editor {
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         margin-right: -8px;
     }
     .details {
+        justify-content: center;
         margin-bottom: 16px;
+        .iconify {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
     }
     .buttons {
         margin-right: -8px;
@@ -146,11 +151,12 @@ button.icon-and-text {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
         margin-right: -8px;
         h1 {
+            margin-left: 16px;
             font-size: 1.2rem;
-            margin-right: 8px;
+            margin-right: 24px;
         }
     }
     .details {
@@ -165,6 +171,13 @@ button.icon-and-text {
         }
     }
     .factoid-column {
+        margin-bottom: 12px;
+        h2 {
+            margin-left: 4px;
+            margin-bottom: 12px;
+        }
+    }
+    .factoid-column:last-child {
         margin-bottom: -4px;
     }
 }

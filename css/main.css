@@ -106,7 +106,7 @@ button.icon-and-text p {
 #edit-height-widget .editor {
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   margin-right: -8px;
 }
 #edit-height-widget .details {
@@ -116,11 +116,16 @@ button.icon-and-text p {
 #edit-heels-widget .editor {
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   margin-right: -8px;
 }
 #edit-heels-widget .details {
+  justify-content: center;
   margin-bottom: 16px;
+}
+#edit-heels-widget .details .iconify {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 #edit-heels-widget .buttons {
   margin-right: -8px;
@@ -148,12 +153,13 @@ button.icon-and-text p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   margin-right: -8px;
 }
 #edit-weight-widget .editor h1 {
+  margin-left: 16px;
   font-size: 1.2rem;
-  margin-right: 8px;
+  margin-right: 24px;
 }
 #edit-weight-widget .details {
   margin-bottom: 4px;
@@ -166,6 +172,13 @@ button.icon-and-text p {
   margin-left: 4px;
 }
 #details-widget .factoid-column {
+  margin-bottom: 12px;
+}
+#details-widget .factoid-column h2 {
+  margin-left: 4px;
+  margin-bottom: 12px;
+}
+#details-widget .factoid-column:last-child {
   margin-bottom: -4px;
 }
 

@@ -6,72 +6,58 @@ $(() => {
 });
 
 DetailsWidget.init = () => {
+    const HEIGHT = { 
+        avg: 'Average height', 
+        pos: 'Taller than', 
+        neg: 'Shorter than', 
+        posDiv: 'Only matched by', 
+        negDiv: 'Only taller than' 
+    };
+    const MALE = { plural: 'men', singular: 'man' };
+    const FEMALE = { plural: 'women', singular: 'woman' };
+    const EITHER = { plural: 'people', singular: 'person' };
+
     let person = People.getSelected();
 
-    let isWearingHeels = person.height != person.heightPlusHeels;
-    let flatFeetSuffix = isWearingHeels ? ' (without heels)' : '';
+    $('#details-widget .height p').text(Height.displayString(person.height));
+    let percMen = Averages.getMalePercentile(Averages.ADULT, person.height);
+    let percMenStr = DetailsWidget.getPercStr(percMen, HEIGHT, MALE);
+    $('#details-widget .percentile-men p').text(percMenStr);
+    let percWomen = Averages.getFemalePercentile(Averages.ADULT, person.height);
+    let percWomenStr = DetailsWidget.getPercStr(percWomen, HEIGHT, FEMALE);
+    $('#details-widget .percentile-women p').text(percWomenStr);
+    let percTotal = (percMen + percWomen) / 2;
+    let percTotalStr = DetailsWidget.getPercStr(percTotal, HEIGHT, EITHER);
+    $('#details-widget .percentile-total p').text(percTotalStr);
 
-    let percentileMen = Averages.getMalePercentile(Averages.ADULT, person.height) * 100;
-    let percentileMenStr = `Average height for a man${flatFeetSuffix}`;
-    if (percentileMen >= 50.1) { percentileMenStr = `Taller than ${DetailsWidget.getPercentString(percentileMen)} men${flatFeetSuffix}`; }
-    if (percentileMen <= 49.9) { percentileMenStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileMen)} men${flatFeetSuffix}`; }
-    $('#details-widget .percentile-men p').text(percentileMenStr);
-    
-    let percentileWomen = Averages.getFemalePercentile(Averages.ADULT, person.height) * 100;
-    let percentileWomenStr = `Average height for a woman${flatFeetSuffix}`;
-    if (percentileWomen >= 50.1) { percentileWomenStr = `Taller than ${DetailsWidget.getPercentString(percentileWomen)} women${flatFeetSuffix}`; }
-    if (percentileWomen <= 49.9) { percentileWomenStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileWomen)} women${flatFeetSuffix}`; }
-    $('#details-widget .percentile-women p').text(percentileWomenStr);
-
-    let percentileTotal = (percentileMen + percentileWomen) / 2;
-    let percentileTotalStr = `Average height for a person${flatFeetSuffix}`;
-    if (percentileTotal >= 50.1) { percentileTotalStr = `Taller than ${DetailsWidget.getPercentString(percentileTotal)} people${flatFeetSuffix}`; }
-    if (percentileTotal <= 49.9) { percentileTotalStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileTotal)} people${flatFeetSuffix}`; }
-    $('#details-widget .percentile-total p').text(percentileTotalStr);
-
-    if (isWearingHeels) {
-        let percentileHeelsMen = Averages.getMalePercentile(Averages.ADULT, person.heightPlusHeels) * 100;
-        let percentileHeelsMenStr = 'Average height for a man (in heels)';
-        if (percentileHeelsMen >= 50.1) { percentileHeelsMenStr = `Taller than ${DetailsWidget.getPercentString(percentileHeelsMen)} men (in heels)`; }
-        if (percentileHeelsMen <= 49.9) { percentileHeelsMenStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileHeelsMen)} men (in heels)`; }
-        $('#details-widget .percentile-men-heels p').text(percentileHeelsMenStr);
-        
-        let percentileHeelsWomen = Averages.getFemalePercentile(Averages.ADULT, person.heightPlusHeels) * 100;
-        let percentileHeelsWomenStr = 'Average height for a woman (in heels)';
-        if (percentileHeelsWomen >= 50.1) { percentileHeelsWomenStr = `Taller than ${DetailsWidget.getPercentString(percentileHeelsWomen)} women (in heels)`; }
-        if (percentileHeelsWomen <= 49.9) { percentileHeelsWomenStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileHeelsWomen)} women (in heels)`; }
-        $('#details-widget .percentile-women-heels p').text(percentileHeelsWomenStr);
-
-        let percentileHeelsTotal = (percentileHeelsMen + percentileHeelsWomen) / 2;
-        let percentileHeelsTotalStr = 'Average height for a person (in heels)';
-        if (percentileHeelsTotal >= 50.1) { percentileHeelsTotalStr = `Taller than ${DetailsWidget.getPercentString(percentileHeelsTotal)} people (in heels)`; }
-        if (percentileHeelsTotal <= 49.9) { percentileHeelsTotalStr = `Shorter than ${DetailsWidget.getPercentString(100 - percentileHeelsTotal)} people (in heels)`; }
-        $('#details-widget .percentile-total-heels p').text(percentileHeelsTotalStr);
-
-        $('#details-widget .percentile-men-heels').removeClass('gone');
-        $('#details-widget .percentile-women-heels').removeClass('gone');
-        $('#details-widget .percentile-total-heels').removeClass('gone');
+    if (person.height != person.heightPlusHeels) {
+        $('#details-widget .height-heels p').text(Height.displayString(person.heightPlusHeels));
+        let percHeelsMen = Averages.getMalePercentile(Averages.ADULT, person.heightPlusHeels);
+        let percHeelsMenStr = DetailsWidget.getPercStr(percHeelsMen, HEIGHT, MALE);
+        $('#details-widget .percentile-men-heels p').text(percHeelsMenStr);
+        let percHeelsWomen = Averages.getFemalePercentile(Averages.ADULT, person.heightPlusHeels);
+        let percHeelsWomenStr = DetailsWidget.getPercStr(percHeelsWomen, HEIGHT, FEMALE);
+        $('#details-widget .percentile-women-heels p').text(percHeelsWomenStr);
+        let percHeelsTotal = (percHeelsMen + percHeelsWomen) / 2;
+        let percHeelsTotalStr = DetailsWidget.getPercStr(percHeelsTotal, HEIGHT, EITHER);
+        $('#details-widget .percentile-total-heels p').text(percHeelsTotalStr);
+        $('#details-widget .section-height-heels').removeClass('gone');
     }
     else {
-        $('#details-widget .percentile-men-heels').addClass('gone');
-        $('#details-widget .percentile-women-heels').addClass('gone');
-        $('#details-widget .percentile-total-heels').addClass('gone');
+        $('#details-widget .section-height-heels').addClass('gone');
     }
 };
-DetailsWidget.getPercentString = (percentile) => {
-    if (percentile >= 99.99999) {
-        return 'basically all';
-    }
-    else if (percentile > 99.95) {
-        let amount = 100 / (100 - percentile);
-        return `1 in ${amount.toFixed()}`;
-    }
-    else if (percentile > 98) {
-        return `${percentile.toFixed(2)}% of`;
-    }
-    else {
-        return `${percentile.toFixed()}% of`;
-    }
+DetailsWidget.getPercStr = (perc, attr, gender) => {
+    if (perc >= 0.5) { return DetailsWidget.getPercStrHalf(perc, attr.pos, attr.posDiv, attr.avg, gender); }
+    else { return DetailsWidget.getPercStrHalf(1 - perc, attr.neg, attr.negDiv, attr.avg, gender); }
+};
+DetailsWidget.getPercStrHalf = (_perc, ss, ssDiv, ssAvg, gender) => {
+    let perc = _perc * 100;
+    if (perc > 99.99999) { return `${ss} basically all ${gender.plural}`; }
+    else if (perc > 99.95) { return `${ssDiv} 1 in ${(1 / (1 - _perc)).toFixed()} ${gender.plural}`; }
+    else if (perc > 98) { return `${ss} ${perc.toFixed(2)}% of ${gender.plural}`; }
+    else if (perc > 60) { return `${ss} ${perc.toFixed()}% of ${gender.plural}`; }
+    else { return `${ssAvg} for a ${gender.singular}`; }
 };
 DetailsWidget.close = () => {
     Widget.changeWidget(PersonWidget);
