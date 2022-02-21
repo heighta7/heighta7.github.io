@@ -8,33 +8,33 @@ Persistance.markDirty = () => {
 };
 
 Persistance.save = () => {
-    Cookies.set('people', JSON.stringify(People.list), { sameSite: 'lax' });
+    localStorage.setItem('a7-people', JSON.stringify(People.list));
     let viewport = Viewport.get;
-    Cookies.set('viewport', JSON.stringify({ x: viewport.x, y: viewport.y, scale: viewport.scaled }), { sameSite: 'lax' });
-    Cookies.set('settings', JSON.stringify({ heels: People.isGlobalHeelsEnabled() }), { sameSite: 'lax' });
+    localStorage.setItem('a7-viewport', JSON.stringify({ x: viewport.x, y: viewport.y, scale: viewport.scaled }));
+    localStorage.setItem('a7-settings', JSON.stringify({ heels: People.isGlobalHeelsEnabled() }));
 };
 
 Persistance.delete = () => {
-    Cookies.remove('people');
-    Cookies.remove('viewport');
-    Cookies.remove('settings');
+    localStorage.removeItem('a7-people');
+    localStorage.removeItem('a7-viewport');
+    localStorage.removeItem('a7-settings');
 };
 
 Persistance.load = (onFail) => {
     try {
-        let cookie = Cookies.get('people');
+        let cookie = localStorage.getItem('a7-people');
         if (cookie == null) { onFail(); return; }
     
         let peopleJson = JSON.parse(cookie);
         let people = peopleJson.map(x => Person.fromJson(x));
         people.forEach(x => People.add(x, false, false));
         
-        let viewportJson = JSON.parse(Cookies.get('viewport'));
+        let viewportJson = JSON.parse(localStorage.getItem('a7-viewport'));
         Viewport.get.x = viewportJson.x;
         Viewport.get.y = viewportJson.y;
         Viewport.get.scaled = viewportJson.scale;
     
-        let settingsJson = JSON.parse(Cookies.get('settings'));
+        let settingsJson = JSON.parse(localStorage.getItem('a7-settings'));
         People.setGlobalHeelsEnabled(settingsJson.heels);
     }
     catch {
