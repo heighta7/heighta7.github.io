@@ -58,6 +58,17 @@ button.icon-and-text {
 .picker-thin {
     width: 60px;
 }
+.carousel {
+    flex-direction: row;
+    align-items: center;
+    p {
+        font-weight: bold;
+        font-size: 1.0rem;
+    }
+    button {
+        width: 40px;
+    }
+}
 
 #widget-holder {
     position: fixed;
@@ -106,6 +117,28 @@ button.icon-and-text {
     }
     .details {
         margin-bottom: 16px;
+    }
+}
+#average-heights-widget {
+    .editor >p {
+        align-self: center;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+    .editor .carousel {
+        margin-bottom: 16px;
+    }
+    .result {
+        align-items: center;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+    .result-title {
+        margin-bottom: 8px;
+    }
+    .result-height {
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 }
 #edit-heels-widget {

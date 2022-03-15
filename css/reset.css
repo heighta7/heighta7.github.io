@@ -382,15 +382,15 @@ a.button {
 }
 
 .dark button, .dark input[type=button], .dark input[type=submit], .dark input[type=reset], .dark a.button {
-  background-color: rgba(204, 204, 204, 0.05);
+  background-color: rgba(204, 204, 204, 0.1);
   border: 1px solid transparent;
 }
 .dark button:hover, .dark input[type=button]:hover, .dark input[type=submit]:hover, .dark input[type=reset]:hover, .dark a.button:hover {
-  background-color: rgba(204, 204, 204, 0.08);
+  background-color: rgba(204, 204, 204, 0.15);
   border: 1px solid transparent;
 }
 .dark button:active, .dark input[type=button]:active, .dark input[type=submit]:active, .dark input[type=reset]:active, .dark a.button:active {
-  background-color: rgba(204, 204, 204, 0.11);
+  background-color: rgba(204, 204, 204, 0.2);
   border: 1px solid transparent;
 }
 .dark button:disabled, .dark button[disabled], .dark input[type=button]:disabled, .dark input[type=button][disabled], .dark input[type=submit]:disabled, .dark input[type=submit][disabled], .dark input[type=reset]:disabled, .dark input[type=reset][disabled], .dark a.button:disabled, .dark a.button[disabled] {
@@ -440,11 +440,11 @@ button.icon-button i, input.icon-button[type=button] i, input.icon-button[type=s
   border: none;
 }
 .dark button.icon-button:hover, .dark input.icon-button[type=button]:hover, .dark input.icon-button[type=submit]:hover, .dark input.icon-button[type=reset]:hover, .dark a.icon-button:hover {
-  background-color: rgba(204, 204, 204, 0.08);
+  background-color: rgba(204, 204, 204, 0.15);
   border: none;
 }
 .dark button.icon-button:active, .dark input.icon-button[type=button]:active, .dark input.icon-button[type=submit]:active, .dark input.icon-button[type=reset]:active, .dark a.icon-button:active {
-  background-color: rgba(204, 204, 204, 0.11);
+  background-color: rgba(204, 204, 204, 0.2);
   border: none;
 }
 .dark button.icon-button:disabled, .dark button.icon-button[disabled], .dark input.icon-button[type=button]:disabled, .dark input.icon-button[type=button][disabled], .dark input.icon-button[type=submit]:disabled, .dark input.icon-button[type=submit][disabled], .dark input.icon-button[type=reset]:disabled, .dark input.icon-button[type=reset][disabled], .dark a.icon-button:disabled, .dark a.icon-button[disabled] {
@@ -490,11 +490,11 @@ button.subtle i, input.subtle[type=button] i, input.subtle[type=submit] i, input
   border: none;
 }
 .dark button.subtle:hover, .dark input.subtle[type=button]:hover, .dark input.subtle[type=submit]:hover, .dark input.subtle[type=reset]:hover, .dark a.button-subtle:hover {
-  background-color: rgba(204, 204, 204, 0.08);
+  background-color: rgba(204, 204, 204, 0.15);
   border: none;
 }
 .dark button.subtle:active, .dark input.subtle[type=button]:active, .dark input.subtle[type=submit]:active, .dark input.subtle[type=reset]:active, .dark a.button-subtle:active {
-  background-color: rgba(204, 204, 204, 0.11);
+  background-color: rgba(204, 204, 204, 0.2);
   border: none;
 }
 .dark button.subtle:disabled, .dark button.subtle[disabled], .dark input.subtle[type=button]:disabled, .dark input.subtle[type=button][disabled], .dark input.subtle[type=submit]:disabled, .dark input.subtle[type=submit][disabled], .dark input.subtle[type=reset]:disabled, .dark input.subtle[type=reset][disabled], .dark a.button-subtle:disabled, .dark a.button-subtle[disabled] {
@@ -730,15 +730,15 @@ label.radio input[type=radio]:checked + .radio-check {
 }
 
 .dark label.radio input[type=radio] {
-  background: rgba(204, 204, 204, 0.05);
+  background: rgba(204, 204, 204, 0.1);
   border: 1px solid transparent;
 }
 .dark label.radio input[type=radio]:hover {
-  background: rgba(204, 204, 204, 0.08);
+  background: rgba(204, 204, 204, 0.15);
   border: 1px solid transparent;
 }
 .dark label.radio input[type=radio]:active {
-  background: rgba(204, 204, 204, 0.11);
+  background: rgba(204, 204, 204, 0.2);
   border: 1px solid transparent;
 }
 .dark label.radio input[type=radio]:focus {

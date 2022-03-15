@@ -3,6 +3,7 @@ EditHeightWidget.name = 'edit-height-widget';
 
 $(() => {
     $('#edit-height-widget .close').on('click', () => { EditHeightWidget.close(); });
+    $('#edit-height-widget .averages').on('click', () => { EditHeightWidget.averages(); });
     $('#edit-height-widget .height-feet .picker-up').on('click', () => { EditHeightWidget.heightButton(Height.FOOT); });
     $('#edit-height-widget .height-feet .picker-down').on('click', () => { EditHeightWidget.heightButton(-Height.FOOT); });
     $('#edit-height-widget .height-inches .picker-up').on('click', () => { EditHeightWidget.heightButton(Height.INCH); });
@@ -16,6 +17,9 @@ EditHeightWidget.init = () => {
 };
 EditHeightWidget.close = () => {
     Widget.changeWidget(PersonWidget);
+};
+EditHeightWidget.averages = () => {
+    Widget.changeWidget(AverageHeightsWidget);
 };
 EditHeightWidget.updateData = () => {
     let person = People.getSelected();

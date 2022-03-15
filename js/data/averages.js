@@ -58,19 +58,24 @@ Averages.getStats = (gender, age) => {
 Averages.lerp = (n, start1, stop1, start2, stop2) => {
     return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
 };
-Averages.getMaleHeight = (age, percentile) => {
-    let stats = Averages.getStats(Averages.MALE, age);
+Averages.getHeight = (gender, age, percentile) => {
+    let stats = Averages.getStats(gender, age);
     return gaussian(stats.mean, stats.std).ppf(percentile);
 };
-Averages.getMalePercentile = (age, height) => {
-    let stats = Averages.getStats(Averages.MALE, age);
-    return gaussian(stats.mean, stats.std).cdf(height);
+Averages.getMaleHeight = (age, percentile) => {
+    return Averages.getHeight(Averages.MALE, age, percentile);
 };
 Averages.getFemaleHeight = (age, percentile) => {
-    let stats = Averages.getStats(Averages.FEMALE, age);
-    return gaussian(stats.mean, stats.std).ppf(percentile);
+    return Averages.getHeight(Averages.FEMALE, age, percentile);
+};
+
+Averages.getPercentile = (gender, age, height) => {
+    let stats = Averages.getStats(gender, age);
+    return gaussian(stats.mean, stats.std).cdf(height);
+};
+Averages.getMalePercentile = (age, height) => {
+    return Averages.getPercentile(Averages.MALE, age, height);
 };
 Averages.getFemalePercentile = (age, height) => {
-    let stats = Averages.getStats(Averages.FEMALE, age);
-    return gaussian(stats.mean, stats.std).cdf(height);
+    return Averages.getPercentile(Averages.FEMALE, age, height);
 };
