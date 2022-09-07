@@ -22,7 +22,8 @@ MainWidget.updateData = () => {
 };
 
 MainWidget.addPerson = () => {
-    let person = new Person();
+    let pos = (Viewport.get.left + Viewport.get.right) / 2;
+    let person = new Person(pos);
     People.add(person);
 };
 MainWidget.clearAll = () => {
