@@ -4,9 +4,9 @@ ViewportEvents.clicked = (coords) => {
     for (let person of heightSorted) {
         let box = Sprites.getPersonBox(person);
         let margin = 5 / Viewport.get.scaled;
-        if (coords.x >= box.x - margin && 
-            coords.x <= box.x + box.width + margin * 2 && 
-            coords.y >= box.y - margin && 
+        if (coords.x >= box.x - margin &&
+            coords.x <= box.x + box.width + margin * 2 &&
+            coords.y >= box.y - margin &&
             coords.y <= box.y + box.height + margin * 2) {
 
             People.select(person);
@@ -18,6 +18,10 @@ ViewportEvents.clicked = (coords) => {
 
 const SpriteDragEvents = {};
 SpriteDragEvents.start = (sprite, event) => {
+    if (sprite.person.id != People.selected) {
+        return;
+    }
+
     sprite.data = event.data;
     sprite.alpha = 0.5;
     sprite.dragging = 'maybe';
@@ -56,7 +60,7 @@ SpriteDragEvents.move = (sprite) => {
         let newX = pointerPos.x + sprite.draggingOffsetX;
         let newY = pointerPos.y + sprite.draggingOffsetY;
 
-        if (Math.abs(-sprite.person.heightPlusHeels - newY) < 10 / Viewport.get.scaled) { newY = -sprite.person.heightPlusHeels; }
+        if (Math.abs(-sprite.person.heightPlusHeels - newY) < 15 / Viewport.get.scaled) { newY = -sprite.person.heightPlusHeels; }
         sprite.x = newX;
         sprite.y = newY;
     }
