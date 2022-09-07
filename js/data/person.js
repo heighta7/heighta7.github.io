@@ -1,7 +1,7 @@
 class Person {
-    constructor() {
+    constructor(startX = 0) {
         this._id = (Math.random() * 10000000).toFixed();
-        this._x = 0;
+        this._x = startX;
         this._y = 0;
         this._height = Height.fromImperial(5, 6);
         this._graphic = 'r1';
@@ -12,12 +12,12 @@ class Person {
         this._weightRatioHeight = Height.fromImperial(5, 9);
         this._dirty = false;
     }
-    
+
     get id() { return this._id; }
     get dirty() { return this._dirty; }
     markClean() { this._dirty = false; }
     markDirty() { this._dirty = true; }
-    
+
     get x() { return this._x; }
     set x(val) { this._x = val; this._dirty = true; }
 
@@ -27,7 +27,7 @@ class Person {
     get height() { return this._height; }
     get heightPlusHeels() {
         if (!this.shouldDoHeels) { return this.height; }
-        return this.height + this.calculateHeelsCm(); 
+        return this.height + this.calculateHeelsCm();
     }
     set height(val) { this._height = val; this._dirty = true; }
 
@@ -40,7 +40,7 @@ class Person {
     get heelsEnabled() { return this._heelsEnabled; }
     get shouldDoHeels() { return this.heelsEnabled && People.isGlobalHeelsEnabled(); }
     set heelsEnabled(val) { this._heelsEnabled = val; this._dirty = true; }
-    
+
     get weightRatioWeight() { return this._weightRatioWeight; }
     set weightRatioWeight(val) { this._weightRatioWeight = val; this._dirty = true; }
     get weightRatioHeight() { return this._weightRatioHeight; }
