@@ -10,7 +10,10 @@ Persistance.markDirty = () => {
 Persistance.save = () => {
     localStorage.setItem('a7-people', JSON.stringify(People.list));
     let viewport = Viewport.get;
-    localStorage.setItem('a7-viewport', JSON.stringify({ x: viewport.x, y: viewport.y, scale: viewport.scaled }));
+    let x = (viewport.left + viewport.right) / 2;
+    let y = (viewport.top + viewport.bottom) / 2;
+    console.log("saved", x, y);
+    localStorage.setItem('a7-viewport', JSON.stringify({ x: x, y: y, scale: viewport.scaled }));
     localStorage.setItem('a7-settings', JSON.stringify({ heels: People.isGlobalHeelsEnabled() }));
 };
 
@@ -24,16 +27,16 @@ Persistance.load = (onFail) => {
     try {
         let cookie = localStorage.getItem('a7-people');
         if (cookie == null) { onFail(); return; }
-    
+
         let peopleJson = JSON.parse(cookie);
         let people = peopleJson.map(x => Person.fromJson(x));
         people.forEach(x => People.add(x, false, false));
-        
+
         let viewportJson = JSON.parse(localStorage.getItem('a7-viewport'));
-        Viewport.get.x = viewportJson.x;
-        Viewport.get.y = viewportJson.y;
+        Viewport.get.moveCenter(viewportJson.x, viewportJson.y);
+        console.log("loaded", Viewport.get.x, Viewport.get.y);
         Viewport.get.scaled = viewportJson.scale;
-    
+
         let settingsJson = JSON.parse(localStorage.getItem('a7-settings'));
         People.setGlobalHeelsEnabled(settingsJson.heels);
     }
