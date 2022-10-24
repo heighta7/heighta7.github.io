@@ -54,7 +54,7 @@ DetailsWidget.getPercStr = (perc, attr, gender) => {
 DetailsWidget.getPercStrHalf = (_perc, ss, ssDiv, ssAvg, gender) => {
     let perc = _perc * 100;
     let decimals = perc.toString().matchAll(/[^.9]/g).next().value.index - 2;
-    if (perc > 99.99999) { return `${ss} basically all ${gender.plural} (${perc.toFixed(decimals)}th percentile)`; }
+    if (perc > 99.9999999999) { return `${ss} basically all ${gender.plural} (${perc.toFixed(decimals)}th percentile)`; }
     else if (perc > 99.95) { return `${ssDiv} 1 in ${(1 / (1 - _perc)).toFixed()} ${gender.plural} (${perc.toFixed(decimals)}th percentile)`; }
     else if (perc > 98) { return `${ss} ${perc.toFixed(2)}% of ${gender.plural}`; }
     else if (perc > 60) { return `${ss} ${perc.toFixed()}% of ${gender.plural}`; }
