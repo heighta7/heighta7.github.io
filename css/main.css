@@ -73,6 +73,7 @@ button.icon-and-text p {
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
+  margin: 0rem 1rem;
 }
 .carousel button {
   width: 40px;
