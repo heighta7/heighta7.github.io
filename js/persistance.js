@@ -12,7 +12,6 @@ Persistance.save = () => {
     let viewport = Viewport.get;
     let x = (viewport.left + viewport.right) / 2;
     let y = (viewport.top + viewport.bottom) / 2;
-    console.log("saved", x, y);
     localStorage.setItem('a7-viewport', JSON.stringify({ x: x, y: y, scale: viewport.scaled }));
     localStorage.setItem('a7-settings', JSON.stringify({ heels: People.isGlobalHeelsEnabled() }));
 };
@@ -34,7 +33,6 @@ Persistance.load = (onFail) => {
 
         let viewportJson = JSON.parse(localStorage.getItem('a7-viewport'));
         Viewport.get.moveCenter(viewportJson.x, viewportJson.y);
-        console.log("loaded", Viewport.get.x, Viewport.get.y);
         Viewport.get.scaled = viewportJson.scale;
 
         let settingsJson = JSON.parse(localStorage.getItem('a7-settings'));
