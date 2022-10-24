@@ -22,6 +22,8 @@ AverageHeightsWidget.ages = [
     { name: "of adult age", value: Averages.ADULT, isYoung: false }
 ];
 AverageHeightsWidget.percentiles = [
+    { name: "in the 0.00001th percentile", value: 0.0000001 },
+    { name: "in the 0.0001th percentile", value: 0.000001 },
     { name: "in the 0.001th percentile", value: 0.00001 },
     { name: "in the 0.01th percentile", value: 0.0001 },
     { name: "in the 0.1th percentile", value: 0.001 },
@@ -39,6 +41,8 @@ AverageHeightsWidget.percentiles = [
     { name: "in the 99.9th percentile", value: 0.999 },
     { name: "in the 99.99th percentile", value: 0.9999 },
     { name: "in the 99.999th percentile", value: 0.99999 },
+    { name: "in the 99.9999th percentile", value: 0.999999 },
+    { name: "in the 99.99999th percentile", value: 0.9999999 },
 ];
 AverageHeightsWidget.defaultGender = 0;
 AverageHeightsWidget.defaultAge = 14;
