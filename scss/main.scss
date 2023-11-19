@@ -85,14 +85,19 @@ button.icon-and-text {
 }
 #person-widget {
     .details {
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-left: 4px;
-        margin-right: 4px;
-        .height {
-            font-size: 1.2rem;
-            font-weight: 900;
-            margin-bottom: 12px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        .primary {
+            margin-top: 6px;
+            margin-bottom: 16px;
+            margin-left: 4px;
+            margin-right: 4px;
+            .height {
+                font-size: 1.2rem;
+                font-weight: 900;
+                margin-bottom: 12px;
+            }
         }
     }
 }
@@ -163,7 +168,7 @@ button.icon-and-text {
         button {
             margin-right: 8px;
         }
-    } 
+    }
 }
 #edit-graphic-widget {
     .options {

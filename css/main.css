@@ -85,7 +85,7 @@ button.icon-and-text p {
   left: 0px;
   width: 100%;
   border-radius: 8px 8px 0px 0px;
-  box-shadow: 0px 0px 8px #00000060;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3764705882);
 }
 
 .widget {
@@ -93,12 +93,16 @@ button.icon-and-text p {
 }
 
 #person-widget .details {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+#person-widget .details .primary {
   margin-top: 6px;
   margin-bottom: 16px;
   margin-left: 4px;
   margin-right: 4px;
 }
-#person-widget .details .height {
+#person-widget .details .primary .height {
   font-size: 1.2rem;
   font-weight: 900;
   margin-bottom: 12px;

@@ -6,6 +6,7 @@ $(() => {
     $('#person-widget .heels').on('click', () => { PersonWidget.editHeels(); });
     $('#person-widget .graphic').on('click', () => { PersonWidget.graphic(); });
     $('#person-widget .more').on('click', () => { PersonWidget.more(); });
+    $('#person-widget .close').on('click', () => { PersonWidget.close(); });
 });
 
 PersonWidget.init = () => {
@@ -37,4 +38,7 @@ PersonWidget.editHeels = () => {
 };
 PersonWidget.more = () => {
     Widget.changeWidget(PersonMenuWidget);
+};
+PersonWidget.close = () => {
+    People.select(null);
 };

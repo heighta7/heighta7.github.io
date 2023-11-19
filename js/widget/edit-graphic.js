@@ -18,9 +18,10 @@ EditGraphicWidget.close = () => {
     Widget.changeWidget(PersonWidget);
 };
 EditGraphicWidget.updateData = () => {
-    
+
 };
 EditGraphicWidget.chooseGraphic = (graphic) => {
     People.getSelected().graphic = graphic;
+    People.getSelected().graphicFlipH = false;
     EditGraphicWidget.updateData();
 };

@@ -22,7 +22,7 @@ Sprites.update = () => {
 };
 Sprites.create = (person) => {
     let box = Sprites.getPersonBox(person);
-    
+
     let sprite = new PIXI.Container();
     sprite.x = box.x;
     sprite.y = box.y;
@@ -31,7 +31,7 @@ Sprites.create = (person) => {
     sprite.height = box.height;
     sprite.interactive = true;
     sprite.person = person;
-    
+
     if (person.shouldDoHeels && box.heightNoHeels !== box.height) {
         let heelsPositions = Graphics.heelsPositionsForPerson(person);
         let heelsGraphic = new PIXI.Graphics();
@@ -44,7 +44,8 @@ Sprites.create = (person) => {
 
     let texture = Graphics.forPerson(person);
     let graphic = new PIXI.Sprite(texture);
-    graphic.width = box.width;
+    graphic.x = person.graphicFlipH ? box.width : 0;
+    graphic.width = person.graphicFlipH ? -box.width : box.width;
     graphic.height = box.heightNoHeels;
     sprite.addChild(graphic);
 
@@ -55,7 +56,7 @@ Sprites.create = (person) => {
     sprite.on('pointerup', onDragEnd);
     sprite.on('pointerupoutside', onDragEnd);
     sprite.on('pointermove', onDragMove);
-    
+
     Sprites.dict[person.id] = sprite;
     Sprites.container.addChild(sprite);
 

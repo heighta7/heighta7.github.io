@@ -5,6 +5,7 @@ class Person {
         this._y = 0;
         this._height = Height.fromImperial(5, 6);
         this._graphic = 'r1';
+        this._graphicFlipH = false;
         this._heelsPercent = 0;
         this._heelsCm = null;
         this._heelsEnabled = true;
@@ -33,6 +34,9 @@ class Person {
 
     get graphic() { return this._graphic; }
     set graphic(val) { this._graphic = val; this._dirty = true; }
+
+    get graphicFlipH() { return this._graphicFlipH; }
+    set graphicFlipH(val) { this._graphicFlipH = val; this._dirty = true; }
 
     get heelsPercent() { return this._heelsPercent; }
     get heelsCm() { return this._heelsCm; }
@@ -75,6 +79,7 @@ class Person {
         person._y = json._y;
         person._height = json._height;
         person._graphic = json._graphic;
+        person._graphicFlipH = json._graphicFlipH;
         person._heelsCm = json._heelsCm;
         person._heelsPercent = json._heelsPercent;
         person._heelsEnabled = json._heelsEnabled;
