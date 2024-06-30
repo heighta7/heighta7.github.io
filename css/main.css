@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -131,6 +132,19 @@ button.icon-and-text p {
   margin-bottom: 16px;
 }
 
+#height-menu-widget .title {
+  margin-bottom: 8px;
+}
+#height-menu-widget .title h1 {
+  margin-left: 4px;
+}
+#height-menu-widget .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
 #average-heights-widget .editor > p {
   align-self: center;
   margin-top: 8px;
@@ -150,6 +164,22 @@ button.icon-and-text p {
 #average-heights-widget .result-height {
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+#percentage-height-widget .editor {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-right: -8px;
+}
+#percentage-height-widget .editor h1 {
+  margin-left: 16px;
+  font-size: 1.2rem;
+  margin-right: 24px;
+}
+#percentage-height-widget .details {
+  margin-bottom: 4px;
 }
 
 #edit-heels-widget .editor {
