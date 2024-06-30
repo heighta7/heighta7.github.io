@@ -126,14 +126,33 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button class="averages icon-and-text">
-                        <span class="iconify" data-icon="uil:dna"></span>
-                        <p>Use averages</p>
+                    <button class="advanced icon-and-text">
+                        <span class="iconify" data-icon="uil:calculator"></span>
+                        <p>Advanced</p>
                     </button>
                     <div class="flex-grow"></div>
                     <button class="close icon-and-text">
                         <span class="iconify" data-icon="uil:check"></span>
                         <p>Done</p>
+                    </button>
+                </div>
+            </div>
+            <div id="height-menu-widget" class="widget gone">
+                <div class="title row">
+                    <h1>Advanced height options</h1>
+                    <div class="flex-grow"></div>
+                    <button class="close icon-button">
+                        <span class="iconify" data-icon="uil:times"></span>
+                    </button>
+                </div>
+                <div class="grid">
+                    <button class="averages icon-and-text">
+                        <span class="iconify" data-icon="uil:dna"></span>
+                        <p>Averages</p>
+                    </button>
+                    <button class="percentages icon-and-text">
+                        <span class="iconify" data-icon="uil:calculator"></span>
+                        <p>Percentages</p>
                     </button>
                 </div>
             </div>
@@ -175,6 +194,56 @@
                     <button class="apply icon-and-text">
                         <span class="iconify" data-icon="uil:check"></span>
                         <p>Apply</p>
+                    </button>
+                </div>
+            </div>
+            <div id="percentage-height-widget" class="widget gone">
+                <div class="editor">
+                    <div class="height-feet picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="height-inches picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <h1 class="phrase"></h1>
+                    <div class="percent-tens picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                    <div class="percent-units picker picker-thin">
+                        <button class="picker-up"><span class="iconify" data-icon="uil:angle-up"></span></button>
+                        <div class="flex-grow"></div>
+                        <p></p>
+                        <div class="flex-grow"></div>
+                        <button class="picker-down"><span class="iconify" data-icon="uil:angle-down"></span></button>
+                    </div>
+                </div>
+                <div class="details factoid-column">
+                    <div class="formula-out factoid">
+                        <span class="iconify" data-icon="uil:calculator"></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="close icon-and-text">
+                        <span class="iconify" data-icon="uil:times"></span>
+                        <p>Cancel</p>
+                    </button>
+                    <div class="flex-grow"></div>
+                    <button class="apply icon-and-text">
+                        <span class="iconify" data-icon="uil:check"></span>
+                        <p>Done</p>
                     </button>
                 </div>
             </div>
@@ -373,6 +442,8 @@
         <script src="js/widget/edit-graphic.js"></script>
         <script src="js/widget/edit-weight.js"></script>
         <script src="js/widget/details.js"></script>
+        <script src="js/widget/height-menu.js"></script>
+        <script src="js/widget/percentage-height-widget.js"></script>
 
         <script src="js/app.js"></script>
         <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
