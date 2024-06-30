@@ -1,223 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 button {
-    .iconify {
-        font-size: 1.5rem;
-    }
+  .iconify {
+    font-size: 1.5rem;
+  }
 }
 button.subtle.gone {
-    display: none;
+  display: none;
 }
 button.icon-button {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 button.icon-and-text {
-    flex-direction: row;
-    p {
-        font-weight: bold;
-        margin-left: 8px;
-        margin-right: 6px;
-    }
+  flex-direction: row;
+  p {
+    font-weight: bold;
+    margin-left: 8px;
+    margin-right: 6px;
+  }
 }
 .factoid {
-    flex-direction: row;
-    align-items: center;
-    p {
-        margin-left: 8px;
-    }
+  flex-direction: row;
+  align-items: center;
+  p {
+    margin-left: 8px;
+  }
 }
 .factoid-row {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .factoid-column {
-    margin-bottom: -12px;
-    .factoid {
-        margin-bottom: 12px;
-    }
+  margin-bottom: -12px;
+  .factoid {
+    margin-bottom: 12px;
+  }
 }
 .picker {
-    width: 80px;
-    height: 160px;
-    button {
-        margin-right: 8px;
-    }
-    p {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        margin-right: 16px;
-    }
+  width: 80px;
+  height: 160px;
+  button {
+    margin-right: 8px;
+  }
+  p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 16px;
+  }
 }
 .picker-thin {
-    width: 60px;
+  width: 60px;
 }
 .carousel {
-    flex-direction: row;
-    align-items: center;
-    p {
-        font-weight: bold;
-        font-size: 1.0rem;
-        text-align: center;
-        margin: 0rem 1rem;
-    }
-    button {
-        width: 40px;
-    }
+  flex-direction: row;
+  align-items: center;
+  p {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0rem 1rem;
+  }
+  button {
+    width: 40px;
+  }
 }
 
 #widget-holder {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    border-radius: 8px 8px 0px 0px;
-    box-shadow: 0px 0px 8px #00000060;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 0px 0px 8px #00000060;
 }
 .widget {
-    padding: 12px;
+  padding: 12px;
 }
 #person-widget {
-    .details {
-        display: grid;
-        grid-template-columns: 1fr auto;
+  .details {
+    display: grid;
+    grid-template-columns: 1fr auto;
 
-        .primary {
-            margin-top: 6px;
-            margin-bottom: 16px;
-            margin-left: 4px;
-            margin-right: 4px;
-            .height {
-                font-size: 1.2rem;
-                font-weight: 900;
-                margin-bottom: 12px;
-            }
-        }
+    .primary {
+      margin-top: 6px;
+      margin-bottom: 16px;
+      margin-left: 4px;
+      margin-right: 4px;
+      .height {
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
     }
+  }
 }
 #person-menu-widget {
-    .title {
-        margin-bottom: 8px;
-        h1 {
-            margin-left: 4px;
-        }
+  .title {
+    margin-bottom: 8px;
+    h1 {
+      margin-left: 4px;
     }
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 8px;
-        column-gap: 8px;
-    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 8px;
+  }
 }
 #edit-height-widget {
-    .editor {
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 24px;
-        margin-right: -8px;
+  .editor {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-right: -8px;
+  }
+  .details {
+    margin-bottom: 16px;
+  }
+}
+#height-menu-widget {
+  .title {
+    margin-bottom: 8px;
+    h1 {
+      margin-left: 4px;
     }
-    .details {
-        margin-bottom: 16px;
-    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 8px;
+  }
 }
 #average-heights-widget {
-    .editor >p {
-        align-self: center;
-        margin-top: 8px;
-        margin-bottom: 16px;
+  .editor > p {
+    align-self: center;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .editor .carousel {
+    margin-bottom: 16px;
+  }
+  .result {
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  .result-title {
+    margin-bottom: 8px;
+  }
+  .result-height {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+#percentage-height-widget {
+  .editor {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-right: -8px;
+    h1 {
+      margin-left: 16px;
+      font-size: 1.2rem;
+      margin-right: 24px;
     }
-    .editor .carousel {
-        margin-bottom: 16px;
-    }
-    .result {
-        align-items: center;
-        margin-top: 8px;
-        margin-bottom: 24px;
-    }
-    .result-title {
-        margin-bottom: 8px;
-    }
-    .result-height {
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
+  }
+  .details {
+    margin-bottom: 4px;
+  }
 }
 #edit-heels-widget {
-    .editor {
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 24px;
-        margin-right: -8px;
+  .editor {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-right: -8px;
+  }
+  .details {
+    justify-content: center;
+    margin-bottom: 16px;
+    .iconify {
+      margin-left: 8px;
+      margin-right: 8px;
     }
-    .details {
-        justify-content: center;
-        margin-bottom: 16px;
-        .iconify {
-            margin-left: 8px;
-            margin-right: 8px;
-        }
+  }
+  .buttons {
+    margin-right: -8px;
+    button {
+      margin-right: 8px;
     }
-    .buttons {
-        margin-right: -8px;
-        button {
-            margin-right: 8px;
-        }
-    }
+  }
 }
 #edit-graphic-widget {
-    .options {
-        margin-right: -8px;
-        margin-bottom: 12px;
-        overflow-x: scroll;
-        .option {
-            flex-shrink: 0;
-            height: 100px;
-            width: 60px;
-            margin-right: 8px;
-            img {
-                height: 76px;
-            }
-        }
+  .options {
+    margin-right: -8px;
+    margin-bottom: 12px;
+    overflow-x: scroll;
+    .option {
+      flex-shrink: 0;
+      height: 100px;
+      width: 60px;
+      margin-right: 8px;
+      img {
+        height: 76px;
+      }
     }
+  }
 }
 #edit-weight-widget {
-    .editor {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 24px;
-        margin-right: -8px;
-        h1 {
-            margin-left: 16px;
-            font-size: 1.2rem;
-            margin-right: 24px;
-        }
+  .editor {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-right: -8px;
+    h1 {
+      margin-left: 16px;
+      font-size: 1.2rem;
+      margin-right: 24px;
     }
-    .details {
-        margin-bottom: 4px;
-    }
+  }
+  .details {
+    margin-bottom: 4px;
+  }
 }
 #details-widget {
-    .title {
-        margin-bottom: 8px;
-        h1 {
-            margin-left: 4px;
-        }
+  .title {
+    margin-bottom: 8px;
+    h1 {
+      margin-left: 4px;
     }
-    .factoid-column {
-        margin-bottom: 12px;
-        h2 {
-            margin-left: 4px;
-            margin-bottom: 12px;
-        }
+  }
+  .factoid-column {
+    margin-bottom: 12px;
+    h2 {
+      margin-left: 4px;
+      margin-bottom: 12px;
     }
-    .factoid-column:last-child {
-        margin-bottom: -4px;
-    }
+  }
+  .factoid-column:last-child {
+    margin-bottom: -4px;
+  }
 }
